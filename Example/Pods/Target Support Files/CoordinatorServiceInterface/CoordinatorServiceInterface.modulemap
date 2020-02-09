@@ -1,0 +1,6 @@
+framework module CoordinatorServiceInterface {
+  umbrella header "CoordinatorServiceInterface-umbrella.h"
+
+  export *
+  module * { export * }
+}
