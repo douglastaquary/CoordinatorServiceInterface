@@ -32,7 +32,7 @@ extension AnyCoordinator: Decodable {
     public init(from decoder: Decoder) throws {
         let ctx = decoder.userInfo[AnyCoordinator.contextUserInfoKey]
 
-        guard let context = ctx as? CoordinatorServiceAnyRouteDecodingProtocol else {
+        guard let context = ctx as? CoordinatorServiceAnyCoordinatorDecodingProtocol else {
             preconditionFailure("TRIED TO DECODE ANYROUTE WITHOUT A CONTEXT!")
         }
 
@@ -43,11 +43,11 @@ extension AnyCoordinator: Decodable {
     }
 }
 
-public protocol CoordinatorServiceAnyRouteDecodingProtocol {
+public protocol CoordinatorServiceAnyCoordinatorDecodingProtocol {
     func decodeAnyCoordinator(fromDecoder decoder: Decoder) throws -> (Coordinator, String)
 }
 
-extension CoordinatorServiceAnyRouteDecodingProtocol {
+extension CoordinatorServiceAnyCoordinatorDecodingProtocol {
     /// Injects contextual data in a `JSONDecoder`. This is necessary for decoding `AnyRoutes`s.
     public func injectContext(toDecoder decoder: JSONDecoder) {
         decoder.userInfo[AnyCoordinator.contextUserInfoKey] = self

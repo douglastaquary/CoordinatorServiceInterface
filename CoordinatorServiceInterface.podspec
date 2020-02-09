@@ -24,13 +24,13 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/douglastaquary/CoordinatorServiceInterface'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'douglastaquary' => 'douglas.taquary@santander.com.br' }
+  s.author           = { 'douglastaquary' => 'douglastaquary@gmail.com' }
   s.source           = { :git => 'https://github.com/douglastaquary/CoordinatorServiceInterface.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'CoordinatorServiceInterface/Classes/**/*'
+  s.source_files = 'CoordinatorServiceInterface/Sources/**/*'
   
   # s.resource_bundles = {
   #   'CoordinatorServiceInterface' => ['CoordinatorServiceInterface/Assets/*.png']

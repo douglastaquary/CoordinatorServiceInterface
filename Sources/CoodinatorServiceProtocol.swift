@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public protocol CoordinatorServiceProtocol: Dependency, CoordinatorServiceAnyRouteDecodingProtocol {
+public protocol CoordinatorServiceProtocol: Dependency, CoordinatorServiceAnyCoordinatorDecodingProtocol {
     func navigate(
         toCoodinator coordinator: Coordinator,
         fromView viewController: UIViewController,

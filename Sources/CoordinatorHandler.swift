@@ -8,7 +8,7 @@
 import UIKit
 
 public protocol CoordinatorHandler {
-    var routes: [Coordinator.Type] { get }
+    var coodinators: [Coordinator.Type] { get }
 
     func destination(
         forCoordinator coordinator: Coordinator,
