@@ -8,10 +8,10 @@
 import UIKit
 
 public protocol CoordinatorHandler {
-    var coodinators: [Coordinator.Type] { get }
+    var coordinators: [Coordinator.Type] { get }
 
     func destination(
         forCoordinator coordinator: Coordinator,
         fromViewController viewController: UIViewController
-    ) -> Any
+    ) -> AnyFeature
 }

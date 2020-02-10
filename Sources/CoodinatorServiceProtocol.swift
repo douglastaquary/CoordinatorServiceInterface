@@ -10,14 +10,14 @@ import UIKit
 
 public protocol CoordinatorServiceProtocol: Dependency, CoordinatorServiceAnyCoordinatorDecodingProtocol {
     func navigate(
-        toCoodinator coordinator: Coordinator,
+        toCoordinator coordinator: Coordinator,
         fromView viewController: UIViewController,
         presentationStyle: PresentationStyle,
         animated: Bool
     )
 }
 
-public protocol RouterServiceRegistrationProtocol {
+public protocol CoordinatorServiceRegistrationProtocol {
     func register<T>(dependency: Dependency, forType metaType: T.Type)
     func register(coordinatorHandler: CoordinatorHandler)
 }

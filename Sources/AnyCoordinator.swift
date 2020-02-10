@@ -48,7 +48,7 @@ public protocol CoordinatorServiceAnyCoordinatorDecodingProtocol {
 }
 
 extension CoordinatorServiceAnyCoordinatorDecodingProtocol {
-    /// Injects contextual data in a `JSONDecoder`. This is necessary for decoding `AnyRoutes`s.
+    /// Injects contextual data in a `JSONDecoder`. This is necessary for decoding `AnyCoordinators`s.
     public func injectContext(toDecoder decoder: JSONDecoder) {
         decoder.userInfo[AnyCoordinator.contextUserInfoKey] = self
     }
